@@ -1,0 +1,47 @@
+study_name: taxane_reaction_grammar_space_primary
+python: python
+inputs:
+  rules_t1: data/inputs/reaction_smarts_library.T1_only.tsv
+  rules_t1_sha256: e39b5b03f109059d584dc2ae5e1c16c5c3b18b4e3dd0b6e71515be362510662b
+  rules_t2: data/inputs/reaction_smarts_library.T2_only.tsv
+  rules_t2_sha256: db946d69f29aaa6c0c177ef96ac95cb3e8de17308cd2f214c9b2a78e0675e987
+  rules_t3: data/inputs/reaction_smarts_library.T3_only.tsv
+  rules_t3_sha256: f038fd0e21ccf55e00e2e63a2f7dcf3f14eee327dba69ca50f39b4cff1770911
+  taxane_domain_consensus: data/inputs/reaction_smarts_library.taxane_domain_consensus.tsv
+  taxane_domain_consensus_sha256: b5f7a841cffb696395983a86751e4535522c465c67f00cdb3173fe398c36c193
+  known_taxanes: data/inputs/taxane_nodes.valid.tsv
+  known_taxanes_sha256: e1a37189da9c67e76747b6fa9404ddea683f73a86483dbe5cb8227f2fdc4610c
+  taxol_pathway: data/inputs/taxol_pathway.csv
+  taxol_pathway_sha256: b91619263201eae77a234e7d1e589cd76110a0e9d256ef3b1a4bc006c1bb34b9
+outputs:
+  root: study_outputs/G0_G3_primary_release
+grammar:
+  representatives_per_group: 3
+  max_reactant_atoms: 48
+  require_single_center: true
+  primary_external_rule_count: 65
+  reviewed_taxane_domain_rule_count: 9
+  final_primary_rule_count: 74
+generation:
+  maximum_generation: 3
+  primary_identity: full_inchikey
+  auxiliary_identity: connectivity_inchikey14
+  silent_product_cap_allowed: false
+  max_products_per_parent_rule: 256
+  minimum_source_atom_retention: 0.65
+  maximum_absolute_formal_charge: 2
+  primary_interpretation_generations: [1, 2]
+  exploratory_frontier_generations: [3]
+analysis:
+  nearest_G0_max_nodes_per_generation: 50000
+  fingerprint_projection_max_nodes_per_generation: 20000
+  random_seed: 1729
+sensitivity:
+  evidence_partitions_are_exclusive: true
+  T2_maximum_generation: 1
+  T3_maximum_generation: 1
+benchmark:
+  curated_positive_reactions: 30
+  matched_decoys: 600
+  external_exact_pair_leakage_removal: true
+  domain_replay_is_internal_calibration: true

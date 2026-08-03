@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taxane-article-release-builder"
+version = "0.3.0"
+description = "Assemble the frozen taxane reaction-grammar analysis into a submission-oriented reproducible article release."
+requires-python = ">=3.10"
+dependencies = [
+  "python-docx>=1.1",
+  "openpyxl>=3.1",
+  "Pillow>=10",
+  "pypdf>=6",
+  "reportlab>=4",
+  "lxml>=5",
+]
+
+[project.scripts]
+build-taxane-article-release = "article_release_builder.build_release:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

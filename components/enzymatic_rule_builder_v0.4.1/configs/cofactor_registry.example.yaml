@@ -1,0 +1,13 @@
+# Optional external participant registry. This file is an example, not a hidden rule source.
+# In production, use a provenance-tracked registry and let 00_inventory/source_inventory.lock.tsv record its checksum.
+participants:
+  - class: NADPH_O2
+    smiles:
+      - "O=O"
+  - class: water
+    smiles:
+      - "O"
+  - class: CoA_related
+    smiles: []
+  - class: UDP_sugar_related
+    smiles: []

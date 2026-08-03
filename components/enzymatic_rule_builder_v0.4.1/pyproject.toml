@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enzymatic-rule-builder"
+version = "0.4.1"
+description = "Database-derived builder for evidence-stratified one-step enzymatic transformation rules"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Enzymatic Rule Builder Contributors"}]
+dependencies = [
+  "pandas>=2.0",
+  "pyyaml>=6.0"
+]
+
+[project.optional-dependencies]
+chem = ["rdkit>=2023.9"]
+mapper = ["rdchiral>=1.1.0", "rxnmapper>=0.3.5"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+enzymatic-rules = "enzymatic_rule_builder.cli:main"
+taxane-rules = "enzymatic_rule_builder.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

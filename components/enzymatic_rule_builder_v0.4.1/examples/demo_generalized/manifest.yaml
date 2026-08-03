@@ -1,0 +1,18 @@
+datasets:
+  demo_template:
+    enabled: true
+    parser: generic_template_table
+    path: ./templates.tsv
+    source_database: RetroRules
+    evidence_layer: T1_Bio_Core
+    delimiter: "\t"
+    column_map:
+      source_reaction_id: rule_id
+      reaction_smarts: reaction_smarts
+      ec_numbers: ec_number
+      reaction_type_source: reaction_type
+      direction: direction
+family_evidence:
+  enabled: true
+  path: ./family_evidence.tsv
+  delimiter: "\t"

@@ -1,0 +1,2 @@
+rule_id	reaction_smarts	ec_number	reaction_type	direction
+RR_DEMO_001	[C:1][OH:2]>>[C:1]=[O:2]	1.1.1.-	alcohol_oxidation	forward

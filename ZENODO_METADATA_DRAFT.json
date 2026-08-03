@@ -1,0 +1,24 @@
+{
+  "upload_type": "software",
+  "title": "Taxane Reaction Grammar Space",
+  "description": "Reproducible software for evidence-stratified enzymatic reaction-grammar construction, strict iterative G0-G3 exploration of taxane chemical space, scientific auditing, analysis, and publication-figure generation.",
+  "creators": [
+    {"name": "Liu, Yugeng"},
+    {"name": "Li, Yirou"},
+    {"name": "Cheng, Junsen"},
+    {"name": "Wang, Zhe"},
+    {"name": "Delaplace, Pierre"},
+    {"name": "Yan, Jianbin"}
+  ],
+  "keywords": [
+    "taxanes",
+    "reaction SMARTS",
+    "enzymatic reaction grammar",
+    "chemical-space enumeration",
+    "cheminformatics"
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-08-03",
+  "license": "BSD-3-Clause",
+  "notes": "DRAFT ONLY. Confirm affiliations, ORCID identifiers, related identifiers, final repository URL, commit, and release tag before deposition."
+}

@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite the archived software release and the associated article."
+title: "Taxane Reaction Grammar Space"
+type: software
+version: 1.0.0
+date-released: 2026-08-03
+repository-code: "https://github.com/Eagan-lau/Taxane"
+license: BSD-3-Clause
+authors:
+  - given-names: Yugeng
+    family-names: Liu
+  - given-names: Yirou
+    family-names: Li
+  - given-names: Junsen
+    family-names: Cheng
+  - given-names: Zhe
+    family-names: Wang
+  - given-names: Pierre
+    family-names: Delaplace
+  - given-names: Jianbin
+    family-names: Yan

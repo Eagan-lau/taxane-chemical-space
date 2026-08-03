@@ -1,0 +1,2 @@
+evidence_id	match_type	match_value	source_database	source_reaction_id	rhea_id	kegg_id	metanetx_id	ec_number	protein_id	primary_family	secondary_families	family	family_role	evidence_type	confidence	evidence_source	provenance
+EXAMPLE_ONLY_001	ec_prefix	1.14						1.14.-.-		Example_oxidoreductase_family		Example_oxidoreductase_family	primary	example	0.5	ExampleOnly	Replace with provenance-tracked external evidence before production use

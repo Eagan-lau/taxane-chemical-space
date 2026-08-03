@@ -1,0 +1,80 @@
+# Database-derived source manifest. Enable only datasets that exist in your local environment.
+# Paths are relative to this manifest unless absolute.
+# The rule library is general: Taxol known-pathway reactions are source/anchor records, not taxane-only rules.
+# For production raw-database builds, prefer:
+#   enzymatic-rules build-from-raw --external-db-root /path/to/external_databases/YYYY-MM-DD --output-root /path/to/build
+# This example remains useful for manual manifests and small smoke builds.
+
+datasets:
+  taxol_known_pathway:
+    enabled: true
+    parser: taxol_pathway_csv
+    path: ../examples/taxol_pathway.csv
+    source_database: TaxolKnownPathway_Curated
+    evidence_layer: T1_Bio_Core
+    curated_taxol_anchor: "true"
+    curated_pathway_name: TaxolKnownPathway
+
+  mollink_stratified_rules:
+    enabled: false
+    parser: mollink_stratified
+    path: /path/to/stratified/01_templates.stratified.tsv
+    source_database: MolLinkExternalTemplates
+    evidence_layer: T1_Bio_Core
+
+  legacy_mollink_network_ready:
+    enabled: false
+    parser: mollink_network_ready
+    path: /path/to/network_ready_external_only/network_ready_external_only_reaction_smarts.tsv
+    source_database: MolLinkNetworkReady
+    evidence_layer: T1_Bio_Core
+
+  retrorules_sqlite:
+    enabled: false
+    parser: retrorules_sqlite
+    path: /path/to/retrorules.sqlite
+    source_database: RetroRules
+    # evidence_layer omitted: the loader infers T1 only for computable SMARTS with biochemical support.
+
+  rhea_exact_reactions:
+    enabled: false
+    parser: reaction_evidence_csv
+    path: /path/to/rhea_reaction_evidence.csv
+    source_database: Rhea
+    # evidence_layer omitted: exact reactions are anchors unless generalized upstream or with --abstract-exact-reactions.
+
+  bionavi_biochem_exact:
+    enabled: false
+    parser: reaction_smiles_lines
+    path: /path/to/biochem_train.rdkit_valid_reactions.txt
+    source_database: BioNaviNP_BioChem
+    evidence_layer: T2_Bio_Extended
+    source_dataset: biochem_train
+
+  bionavi_uspto_np_like:
+    enabled: false
+    parser: reaction_smiles_lines
+    path: /path/to/uspto_npl_np_like.rdkit_valid_reactions.txt
+    source_database: BioNaviNP_USPTO_NPL
+    evidence_layer: T3_Chem_like
+    source_dataset: uspto_npl_np_like
+
+  kegg_reaction_evidence:
+    enabled: false
+    parser: reaction_evidence_csv
+    path: /path/to/kegg_reaction_evidence.csv
+    source_database: KEGG
+
+  metanetx_reaction_evidence:
+    enabled: false
+    parser: reaction_evidence_csv
+    path: /path/to/metanetx_reaction_evidence.csv
+    source_database: MetaNetX
+
+family_evidence:
+  enabled: false
+  # Generated from external evidence such as UniProt/Rhea, BRENDA/SABIO-RK, M-CSA,
+  # HMMER/InterProScan, or provenance-tracked domain/family annotations.
+  # This table is the only source of rule-to-enzyme-family annotation.
+  path: ../examples/family_evidence.example.tsv
+  delimiter: "\t"
