@@ -39,7 +39,7 @@ chem = ["rdkit>=2023.9"]
 test = ["pytest>=8.0"]
 
 [project.urls]
-Repository = "https://github.com/Eagan-lau/Taxane"
+Repository = "https://github.com/Eagan-lau/taxane-chemical-space"
 
 [project.scripts]
 taxane-grammar-space = "taxane_reaction_grammar_space.cli:main"

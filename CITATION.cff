@@ -4,7 +4,7 @@ title: "Taxane Reaction Grammar Space"
 type: software
 version: 1.0.0
 date-released: 2026-08-03
-repository-code: "https://github.com/Eagan-lau/Taxane"
+repository-code: "https://github.com/Eagan-lau/taxane-chemical-space"
 license: BSD-3-Clause
 authors:
   - given-names: Yugeng
