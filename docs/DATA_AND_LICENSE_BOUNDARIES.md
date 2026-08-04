@@ -3,7 +3,8 @@
 This repository contains source code and small synthetic test fixtures only.
 The companion research-data record contains author-generated grammar outputs,
 generated molecular states, directional derivation records, audit tables, and
-figure source data.
+figure source data. It is available from Zenodo at
+[https://doi.org/10.5281/zenodo.21784261](https://doi.org/10.5281/zenodo.21784261).
 
 Raw third-party database records are not part of the software repository.
 Database names, versions, source identifiers, and provenance counts are

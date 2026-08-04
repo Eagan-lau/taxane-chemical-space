@@ -20,5 +20,17 @@
   "version": "1.0.0",
   "publication_date": "2026-08-03",
   "license": "BSD-3-Clause",
-  "notes": "DRAFT ONLY. Confirm affiliations, ORCID identifiers, related identifiers, final repository URL, commit, and release tag before deposition."
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.21784261",
+      "relation": "isSupplementedBy",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://github.com/Eagan-lau/taxane-chemical-space",
+      "relation": "isIdenticalTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "DRAFT SOFTWARE DEPOSITION METADATA. Confirm affiliations, ORCID identifiers, commit, and release tag before depositing the software archive. The companion dataset is available at DOI 10.5281/zenodo.21784261."
 }

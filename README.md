@@ -1,5 +1,7 @@
 # Taxane Reaction Grammar Space
 
+[![Dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21784261.svg)](https://doi.org/10.5281/zenodo.21784261)
+
 Reproducible source code for the study **A provenance-resolved enzymatic
 reaction grammar delineates the generative chemical space of taxanes**.
 
@@ -42,9 +44,19 @@ scripts/                            Released-data reconstruction utilities
 publication_workflows/              Frozen final-figure and release workflows
 ```
 
-Large input tables and generated G0-G3 data are distributed in the companion
-data release. The data DOI will be added to the tagged software release before
-manuscript submission.
+## Data availability
+
+The companion research dataset is openly archived in Zenodo:
+
+> Liu, Y. *Taxane Reaction Grammar Space Data*. Zenodo (2026).
+> [https://doi.org/10.5281/zenodo.21784261](https://doi.org/10.5281/zenodo.21784261)
+
+The Zenodo record contains the generation-resolved G0-G3 molecular-state
+tables, including SMILES and full InChIKeys; directional parent-rule-product
+records; grammar and provenance outputs; validation and audit tables; and
+figure source data. This GitHub repository intentionally contains the
+reproducible source code, documentation, configurations, and small test
+fixtures only. Raw third-party database records are not redistributed.
 
 ## Installation
 
@@ -86,7 +98,9 @@ The complete command order and interpretation boundaries are documented in
 
 ## Released-data reconstruction
 
-After downloading and extracting the companion data record:
+Download the companion data record from
+[Zenodo](https://doi.org/10.5281/zenodo.21784261), verify its supplied
+checksums, and extract the release archives. Then run:
 
 ```bash
 bash restore_release_archives.sh

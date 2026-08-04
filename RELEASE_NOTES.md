@@ -13,9 +13,14 @@ the taxane reaction-grammar chemical space.
 - portable Conda specification, example configuration, tests, and protocol
   documentation.
 
+## Companion data
+
+The generation-resolved molecular states, derivation records, provenance and
+audit tables, and figure source data are archived separately in Zenodo:
+[https://doi.org/10.5281/zenodo.21784261](https://doi.org/10.5281/zenodo.21784261).
+
 ## Scientific boundary
 
 The code generates hypotheses of reaction-grammar accessibility. It does not
 claim that inferred structures are observed metabolites or that individual
 edges are experimentally verified enzyme reactions.
-
